@@ -46,7 +46,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
   /// Таймер
 
-  let deadline = '2019-06-01';
+  let deadline = '2019-08-01';
 
   // Узнаем остаток между сейчас и дедлайном в милисекундах
   function timeRemaining(endtime) {
@@ -103,5 +103,35 @@ const setTime = (id, endtime) => {
 // вызываем сет тайм первым агрументом идет ID  дива где лежит наш таймерб вторым дата окончания таймера
 setTime('timer', deadline);
 
+/// модальное окно
+
+let more  = document.querySelector('.more');
+let  overlay = document.querySelector('.overlay');
+let close = document.querySelector('.popup-close');
+let descriptionBtn = document.querySelectorAll('.description-btn');
+
+descriptionBtn.forEach((e) => {
+  e.addEventListener('click', function () {
+    overlay.style.display = 'block';
+    this.classList.add('more-splash');
+    document.body.style.overflow = 'hidden';
+  });
+});
+
+
+
+more.addEventListener('click', function() {
+  overlay.style.display = 'block';
+  this.classList.add('more-splash');
+  document.body.style.overflow = 'hidden';
+ 
+});
+
+
+ close.addEventListener('click', function() {
+  overlay.style.display = 'none';
+  more.classList.remove('more-splash');
+  document.body.style.overflow = '';
+ });
 
 });
