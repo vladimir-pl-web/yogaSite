@@ -49,13 +49,13 @@ window.addEventListener("DOMContentLoaded", function() {
   let deadline = '2019-08-01';
 
   // Узнаем остаток между сейчас и дедлайном в милисекундах
-  function timeRemaining(endtime) {
+  const  timeRemaining = endtime => {
     let t = Date.parse(endtime) - Date.parse(new Date()), //(с помощью parse)
       seconds = Math.floor((t / 1000) % 60), // округляем до целого ( Math.floor), получаем секунды и остаток от деления на 60
       minutes = Math.floor((t / 1000 / 60) % 60), // округляем-секунды-минуты-остаток от деления на 60
       hours = Math.floor(t / 1000 / 60 / 60); // часы
     // Math.floor((t/1000/60/60) % 24); это если понадобятся дни
-    console.log(t);
+    
     return {
       'total' : t,
       'hours' : hours,
@@ -105,12 +105,12 @@ setTime('timer', deadline);
 
 /// модальное окно
 
-let more  = document.querySelector('.more');
-let  overlay = document.querySelector('.overlay');
-let close = document.querySelector('.popup-close');
-let descriptionBtn = document.querySelectorAll('.description-btn');
+let more  = document.querySelector('.more'),
+  overlay = document.querySelector('.overlay'),
+ close = document.querySelector('.popup-close'),
+ descriptionBtn = document.querySelectorAll('.description-btn');
 
-descriptionBtn.forEach((e) => {
+descriptionBtn.forEach((e) => { /// модальное окно привяжем к кнопкам узнать больше
   e.addEventListener('click', function () {
     overlay.style.display = 'block';
     this.classList.add('more-splash');
@@ -120,7 +120,7 @@ descriptionBtn.forEach((e) => {
 
 
 
-more.addEventListener('click', function() {
+more.addEventListener('click', function() { /// модальное окно привяжем к большшой кнопке
   overlay.style.display = 'block';
   this.classList.add('more-splash');
   document.body.style.overflow = 'hidden';
@@ -128,10 +128,12 @@ more.addEventListener('click', function() {
 });
 
 
- close.addEventListener('click', function() {
+ close.addEventListener('click', () =>  { /// закрытие модального окна
   overlay.style.display = 'none';
   more.classList.remove('more-splash');
   document.body.style.overflow = '';
  });
+
+
 
 });
