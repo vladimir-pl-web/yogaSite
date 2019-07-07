@@ -1,0 +1,23 @@
+{
+  "name": "yogasite",
+  "version": "1.0.0",
+  "description": "Clear Java script",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VovanVovanic/yogaSite.git"
+  },
+  "author": "Vladimir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VovanVovanic/yogaSite/issues"
+  },
+  "homepage": "https://github.com/VovanVovanic/yogaSite#readme",
+  "devDependencies": {
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5"
+  }
+}
