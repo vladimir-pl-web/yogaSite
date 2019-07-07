@@ -1,3 +1,7 @@
+//require('es6-promise').polyfill();
+import 'nodelist-foreach-polyfill';
+require('formdata-polyfill')
+
 window.addEventListener("DOMContentLoaded", function () {
   "use strict";
   let calc = require('./modules/calc.js'),

@@ -17,7 +17,18 @@
   },
   "homepage": "https://github.com/VovanVovanic/yogaSite#readme",
   "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-es6-promise": "^1.1.1",
+    "formdata-polyfill": "^3.0.18",
+    "nodelist-foreach-polyfill": "^1.2.0",
     "webpack": "^4.35.2",
     "webpack-cli": "^3.3.5"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "es6-promise": "^4.2.8"
   }
 }
