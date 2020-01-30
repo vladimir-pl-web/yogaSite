@@ -1,7 +1,7 @@
 function timer() {
     /// Таймер
 
-    let deadline = '2020-08-01';
+    let deadline = '2020-04-01';
 
     // Узнаем остаток между сейчас и дедлайном в милисекундах
     const  timeRemaining = endtime => {
