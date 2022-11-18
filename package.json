@@ -25,7 +25,7 @@
     "formdata-polyfill": "^3.0.18",
     "nodelist-foreach-polyfill": "^1.2.0",
     "webpack": "^4.35.2",
-    "webpack-cli": "^3.3.5"
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
